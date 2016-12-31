@@ -435,11 +435,13 @@ def previousButton() {
 
 //-------------- Switch Commands --------------//
 def on() {
-    sendEvent(name: "switch", value: "on")
+	rokuKeyPressAppAction("PowerOn")
+	refresh()
 }
 
 def off() {
-    sendEvent(name: "switch", value: "off")
+	rokuKeyPressAppAction("PowerOff")
+	refresh()
 }
 //^^^^^^^^^^^^^^ Switch Commands ^^^^^^^^^^^^^^//
 
